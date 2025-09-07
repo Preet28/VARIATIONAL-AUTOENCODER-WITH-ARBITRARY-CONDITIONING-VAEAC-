@@ -1,9 +1,11 @@
 [project]
-name = "vaeac"
+name = "VAEAC"
 version = "0.1.0"
-description = "Add your description here"
+description = "VAEAC"
+authors = [{ name = "Dhruv Panchal And Preet Shah", email = "panchaldhruv27223@gmail.com" }]
 readme = "README.md"
 requires-python = "==3.12.3"
+license = { file = "LICENSE" }
 dependencies = [
     "matplotlib>=3.10.6",
     "numpy>=2.3.2",
