@@ -1,6 +1,7 @@
 ## Data Folders
 Dataset/
 Data/
+Data/
 datasets/
 VAE_Data/
 *.csv
@@ -9,7 +10,10 @@ VAE_Data/
 *.dat
 *.zip
 *.gz
+*.pth
 
+vaeac_checkpoints/
+vaeac_checkpoints_vertical/
 
 # Virtual Environment
 .venv/
