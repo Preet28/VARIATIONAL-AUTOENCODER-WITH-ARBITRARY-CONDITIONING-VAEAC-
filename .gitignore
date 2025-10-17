@@ -1,6 +1,6 @@
 ## Data Folders
 Dataset/
-data/
+Data/
 datasets/
 VAE_Data/
 *.csv
@@ -8,6 +8,8 @@ VAE_Data/
 *.xml
 *.dat
 *.zip
+*.gz
+
 
 # Virtual Environment
 .venv/
