@@ -1,32 +1,33 @@
-📘 Variational Autoencoder with Arbitrary Conditioning (VAEAC)
+## Variational Autoencoder with Arbitrary Conditioning (VAEAC)
 
-VAEAC is a generative model designed for image inpainting with arbitrary masks. Unlike standard VAEs, which assume a fixed input structure, VAEAC learns a conditional latent distribution based on the visible pixels and the mask, allowing it to reconstruct missing regions regardless of their shape, size, or position.
+VAEAC is a generative model designed for **image inpainting with arbitrary masks**. Unlike standard VAEs that assume a fixed input structure, VAEAC learns a **conditional latent distribution** based on the visible pixels and the mask. This enables the model to reconstruct missing regions regardless of their size, shape, or position.
 
-Model Architecture (Brief)
+###  Brief Architecture Overview
 
-Proposal Network (Posterior): Learns an approximate latent distribution using the full image during training.
+- **Proposal Network (Posterior):**  
+  Learns an approximate latent distribution using the *full image* during training.
 
-Conditional Prior Network: Predicts the latent distribution using only the observed (unmasked) pixels and the mask.
+- **Conditional Prior Network:**  
+  Predicts the latent distribution using only the *observed pixels* and the mask.
 
-Decoder (Generative Network): Takes a sampled latent vector along with the observed pixels and reconstructs the missing region.
+- **Decoder (Generative Network):**  
+  Takes a sampled latent vector along with the observed pixels and reconstructs the missing region.
 
-The training objective aligns the prior with the posterior while teaching the decoder to fill in masked regions realistically. At inference, only the conditional prior and decoder are used, enabling diverse and context-aware inpainting.
+The training objective aligns the prior and posterior distributions while teaching the decoder to fill masked regions in a realistic and context-aware manner.
 
-Experiments
+###  Datasets Used
 
-This implementation has been tested on:
+This implementation has been tested on the following datasets:
 
-MNIST
+- **MNIST**
+- **Fashion-MNIST**
+- **CelebA**
 
-Fashion-MNIST
+These experiments demonstrate VAEAC’s flexibility across simple grayscale digits to high-dimensional facial images.
 
-CelebA
+###  Medium Article
 
-Each dataset demonstrates VAEAC’s ability to handle different levels of complexity—from simple digits to high-dimensional face images.
+A detailed explanation of the intuition, architecture, and training process is available in my Medium article:
 
-✍️ Medium Article
-
-A detailed explanation of the intuition, architecture, and training dynamics of VAEAC is available in my Medium article:
-
-👉 Understanding Image Inpainting and the Variational Autoencoder with Arbitrary Conditioning
+ **Understanding Image Inpainting and the Variational Autoencoder with Arbitrary Conditioning**  
 https://medium.com/@PREET9/understanding-image-inpainting-and-the-variational-autoencoder-with-arbitrary-conditioning-225b2552a9cc
